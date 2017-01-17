@@ -1,7 +1,18 @@
 Logs
 =================================
 
-16/01/2016 - created first Naiva Bayes Gaussian Model
+16/01/2017 - Naive Bayes Gaussian Model
+===============================
+
+**[ Test 8 ]**: training size - 80%, test size - 20% on dataset `github-issue-bug-enhancement`
+
+Accuracy - 0.684333524406, Classification Time - 12.723727226257324, Prediciton Time - 3.222942590713501
+
+**[ Test 9 ]**: training size - 90%, test size - 10% on dataset `github-issue-bug-enhancement`
+
+Accuracy - 0.688447971781, Classification Time - 12.812725067138672, Prediciton Time - 1.6439719200134277
+
+16/01/2011 - created first Naiva Bayes Gaussian Model
 ===============================
 
 **[ TEST 1 ]**: training size - 10%, test size - 90% on dataset `github-issue-bug-enhancement`
@@ -37,5 +48,4 @@ Accuracy - 0.684108413193, Classification Time - 9.676283121109009, Prediciton T
 MemoryErr
 
 **[ Test 9 ]**: training size - 90%, test size - 10% on dataset `github-issue-bug-enhancement`
-
 MemoryErr
