@@ -1,3 +1,5 @@
 tmp/
 libs/__pycache__/
 classifiers/github_labels/svm/~$report.xlsx
+classifiers/github_labels/decision_tree/report.xlsx
+classifiers/github_labels/decision_tree/~$report.xlsx
