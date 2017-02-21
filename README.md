@@ -32,3 +32,4 @@ This is my kind of first hands on experimentation with machine learning algorith
     - [ ] Removing stopwords
  - [ ] Principal Component Analysis
  - [ ] GridSearchCV to find best parameters for classifier.
+ - [ ] Classifier features based on POS tagging of the issue title text.
