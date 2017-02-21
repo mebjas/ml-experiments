@@ -16,7 +16,7 @@ ratio = 90
 print ("loading dataset %s from files" % dataset_name)
 dataset = loadData(dataset_name, False)
 labels = loadData(dataset_name, True)
-reduceDatasetBy = 10
+reduceDatasetBy = 1
 
 print ("dataset and labels loaded, splitting using cross_validation")
 features_train, features_test, labels_train, labels_test = preprocess(dataset, labels, 1 - (ratio / 100))
@@ -42,16 +42,18 @@ _start = time.time()
 
 
 # Applying grid GridSearchCV
-clf_rfc = RandomForestClassifier()
-params = {'n_estimators': [5, 10, 20, 50, 100, 200] ,'criterion': ['entropy', 'gini']}
-# clf = RandomForestClassifier(n_estimators=15, criterion="entropy")
-clf = GridSearchCV(clf_rfc, params)
+# clf_rfc = RandomForestClassifier(min_samples_split=10)
+# params = {'n_estimators': [50], 'criterion': ['gini', 'entropy']}
+# clf = GridSearchCV(clf_rfc, params)
+
+clf = RandomForestClassifier(n_estimators=50, min_samples_split=10, criterion='entropy')
 clf.fit(features_train, labels_train)
 _training_time = time.time() - _start
 _start = time.time()
 
-print ("best params")
-print(clf.best_params_)
+# if the GridSearchCV was performed
+# print ("best params")
+# print(clf.best_params_)
  
 print ("predicting test data")
 result = clf.predict(features_test)
