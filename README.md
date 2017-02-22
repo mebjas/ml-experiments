@@ -26,10 +26,14 @@ This is my kind of first hands on experimentation with machine learning algorith
  Random Forest | accuracy = `85.34%` | precision = `[0.87, 0.82]` |
  recall = `[0.92, 0.73]`| fbeta_score = `[0.89, 0.77]`||
  
+ - PCA didn't seem to improve the accuracy of the classifier in inital experiments by around 5%. As can be assumed it took a toll in case of other metrics like precision, fbeta score & recall. Also it increased the time for the process.
+ 
+ - Also, as per initial experiments stemming and stopword removal didn't seem to bring much improvements. It seemd to bring down the metrics in some cases.
+
 #### TODOS / Things to test
- - [ ] Feature Cleaning pipeline
-    - [ ] Stemming of issue text
-    - [ ] Removing stopwords
- - [ ] Principal Component Analysis
- - [ ] GridSearchCV to find best parameters for classifier.
+ - [x] Feature Cleaning pipeline
+    - [x] Stemming of issue text
+    - [x] Removing stopwords
+ - [x] Principal Component Analysis
+ - [x] GridSearchCV to find best parameters for classifier.
  - [ ] Classifier features based on POS tagging of the issue title text.
